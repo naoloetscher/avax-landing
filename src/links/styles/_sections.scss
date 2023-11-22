@@ -1,0 +1,165 @@
+//Section Styling
+.section {
+    padding: 100px 0 48px 0;
+    @media(max-width: 1000px) {
+        padding: 180px 0 50px 0;
+    }
+    position: relative;
+    &::before {
+        @include pseudo-reset;
+        background: url(../images/icons/branding-elements/top-left-edge.svg) no-repeat;
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        top: 100px;
+        @media(max-width: 1000px) {
+            top: 180px;
+        }
+        left: 0;
+    }
+
+    &::after {
+        @include pseudo-reset;
+        background: url(../images/icons/branding-elements/bottom-right-edge.svg) no-repeat;
+        height: 50px;
+        width: 50px;
+        bottom: 0;
+        right: 0;
+    }
+
+    h2 {
+        padding: 50px 0 0 50px;
+        margin: 0 0 50px 0;
+        @media(max-width: 700px) {
+            padding: 30px 0 0 30px;
+            margin: 0 0 30px 0;
+            font-size: 160%;
+        }
+        @media(max-width: 500px) {
+            font-size: 150%;
+        }
+    }
+    h3 {
+        @media(max-width: 700px) {
+            font-size: 150%;
+        } 
+        @media(max-width: 500px) {
+            font-size: 120%;
+        } 
+    }
+}
+
+
+//Title
+.title-sec {
+    margin-bottom: 100px;
+    @media(max-width: 1000px) {
+        margin-bottom: 0px;
+    }
+    h1 {
+        margin-top: 0px;
+    }
+    p {
+        margin-top: -16px;
+    }
+    img {
+        margin-bottom: 24px;
+    }
+    .play-btn {
+        margin-right: 48px;
+    }
+}
+
+
+
+//Usecases
+.usecase-tile {
+    text-align: center;
+    margin-bottom: 96px;
+}
+
+//Products
+.product-tile {
+    display: flex;
+    align-items: start;
+    gap: 48px;
+    h3 {
+        font-size: 170%;
+        margin: 24px 0;
+    }
+    img {
+        width: 100px;
+        margin-top: 64px;
+    }
+    div {
+        margin: 16px 0;
+    }
+    @media(max-width: 400px) {
+        align-items: center;
+        flex-direction: column;
+        gap: 0;
+        text-align: center;
+        h3 {
+            font-size: 140%;
+        }
+        img {
+            width: 80px;
+            margin-top: 24px;
+        }
+        div {
+            margin: 0; 
+        }
+        padding-top: 24px;
+        align-items: center;
+        div {
+            justify-content: center;
+        }
+    } 
+    .title-sub {     
+    h3, h5 {
+        margin: 0;   
+    }
+    }
+}
+
+//Contact
+.personal-contact {
+    img {
+        width: 48%;
+        height: 100%;
+        border-radius: 8px;
+    }
+    h5, h3, p {
+        margin: 8px 0px;
+    }
+    .human-picture {
+        background-image: url(../images/human.webp);
+        border-radius: 8px;
+        align-self: stretch;
+        background-size: cover;
+        background-position: center center;
+    }
+}
+
+.newsletter-tile {
+    width: 100%;
+    input {
+        width: 95%;
+    }
+}
+
+.about-links {
+    button {
+        margin-bottom: 24px;
+    }
+}
+.about {
+    .about-tile {
+        margin-bottom:48px ;
+    }
+}
+
+//Feature Tile
+.u-feature, .p-feature {
+    margin-top: 0 !important;
+}

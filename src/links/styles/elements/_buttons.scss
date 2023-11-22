@@ -1,0 +1,132 @@
+button {
+    font-family: $text;
+    border-width: 0;
+    background: none;
+    transition: $hover-time;
+    white-space: nowrap;
+    color: $on;
+}
+
+.default-btn {
+    padding: 8px 48px;
+    background-color: $on;
+    border-width: 1px;
+    border-radius: 8px;
+    border-color: $on;
+    position: relative;
+    z-index: 0;
+    &::after {
+        @include pseudo-reset;
+        background-color: $bg;
+        top: 0.5px;
+        left: 0.5px;
+        width: calc(100% - 1px);
+        height: calc(100% - 1px);
+        border-radius: 7px;
+        border-top-left-radius: 16px;
+        border-bottom-right-radius: 16px;
+        z-index: 0;
+        transition: $hover-time;
+    }
+    
+    &:hover {
+        color: $accent;
+        &::after {
+            border-top-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+            border-top-right-radius: 16px;
+            border-bottom-left-radius: 16px;
+        }
+        .default-btn-text {
+            color: $accent;
+        }
+    }
+    &:focus {
+        outline-color: $accent-light;
+        outline-style:solid;
+        &::after {
+            border-top-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+            border-top-right-radius: 16px;
+            border-bottom-left-radius: 16px;
+        }
+    }
+    &:active {
+        color: $bg;
+        background-color: $accent;
+        &::after {
+            border-top-left-radius: 16px;
+            border-bottom-right-radius: 16px;
+            border-top-right-radius: 16px;
+            border-bottom-left-radius: 16px;
+        }
+    }
+}
+
+.default-btn-text {
+    position: relative;
+    z-index: 1;
+    color: $on;
+    transition: $hover-time;
+}
+
+.arrow-btn {
+    background: url(../images/icons/right.svg) no-repeat;
+    background-position: calc(100% - 5px);
+    padding-right: 36px;
+    &:hover {
+        padding-left: 8px;
+        background-position: 100%;
+        color: $accent;
+    }
+}
+
+.explore-btn {
+    display: inline-block; 
+    font-family: $text;
+    color: $on;
+    border-width: 0;
+    background: none;
+    transition: $hover-time;
+    white-space: nowrap;
+    text-decoration: none;
+    background: url(../images/icons/down.svg) no-repeat;
+    text-align: left;
+    padding: 4px 0 4px 36px;
+    background-position: 0 0;
+
+    &:hover {
+        background-position: 0px 4px;
+        color: $accent;
+    }
+
+    // Scroll Indicator
+    @media(max-width: 1000px) {
+        position: absolute;
+        left: 50%;
+        margin-left: -50px;
+        top: 4vh;
+    }
+}
+
+.play-btn {
+    text-decoration: none;
+    color: $on;
+    background: url(../images/icons/play.svg) no-repeat;
+    background-size: 20px contain;
+    text-align: left;
+    padding: 4px 0 4px 36px;
+    height: 24px;
+    transition: $hover-time;
+    &:hover {
+        color: $accent;
+    }
+}
+
+.fullwidth-btn {
+    width: 100%;
+}
+
+.ava-toggler {
+    font-weight: 300;
+}

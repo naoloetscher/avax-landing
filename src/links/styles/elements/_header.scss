@@ -1,0 +1,104 @@
+.main-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100vw;
+    height: 100px;
+    position: fixed;
+    background-color: $bg-trans;
+    backdrop-filter: blur(4px);
+    z-index: 2;
+
+    @media(max-width: 1000px) {
+        flex-direction: column;
+        padding: 24px 0px;
+        height: 120px;
+    }
+
+    ul {
+        @include flex-center;
+        padding-right: 64px;
+        @media(max-width: 700px) {
+            flex-wrap: wrap;
+            li {
+                padding-bottom: 16px ;
+            }
+        } 
+    }
+    li {
+        list-style-type: none;
+        margin-left: 48px;
+        font-family: $text;
+        font-weight: 300;
+        
+        @media(max-width: 400px) {
+            margin-left: 24px;
+        } 
+
+        a {
+            position: relative;
+            font-weight: 300;
+            display: inline-block;
+            transition: $hover-time;
+            color: $on;
+            padding-bottom: 8px;
+            text-align: center;
+            
+            &::after {
+                @include pseudo-reset;
+                left: 50%;
+                transform: translateX(-50%);
+                bottom: 0;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: $on;
+                transition: $hover-time;
+                opacity: 0;
+            }
+
+            &:hover {
+                transform: translateY(-5px);
+                &::after {
+                    transform: translateX(-50%) translateY(10px);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    select {
+        border-width: 0;
+    }
+    a {
+        text-decoration: none;
+        font-weight: 600;
+    }
+}
+
+.logo {
+    display: flex;
+    padding-left: 64px; 
+        @media(max-width: 1000px) {
+            padding-left: 0px;
+            padding-bottom: 24px;
+    }
+    &:hover {
+        .hover-rotate {
+            transform: rotate(90deg);
+        }
+    }
+}
+.hover-rotate {
+    transition: $hover-time;
+    transform: rotate(0deg);
+}
+
+// Mobile Menu
+
+@media(max-width: 700px) {
+    .mobile-hide {
+        display: none !important;
+    }
+}
+
+

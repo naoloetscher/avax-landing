@@ -1,0 +1,31 @@
+// Colors
+$on : #111111;
+$accent : #562AE5;
+$accent-light : #562ae586;
+$bg : #ECEBF0;
+$bg-trans : rgba(236, 235, 240, 0.8);
+
+// Spacings
+$content-sp : 1633px;
+
+
+// Typography
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@100;200;300;400&family=Work+Sans:wght@300;400&display=swap');
+
+$text : 'Work Sans', sans-serif;
+$heading : 'Exo 2', sans-serif;
+
+// Animation
+$hover-time: all 0.3s ease;
+
+// Mixins
+@mixin flex-center() {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin pseudo-reset() {
+    content: '';
+    display: block;
+    position: absolute;
+}

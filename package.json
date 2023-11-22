@@ -1,0 +1,27 @@
+{
+  "name": "avax-landing",
+  "version": "1.0.0",
+  "description": "<h2>Ressources</h2> <a href=\"https://www.figma.com/file/2pWUzufu9ybyKHmwL8t0Ob/AVA-X-Re-design?node-id=747%3A21393&viewport=432%2C933%2C0.1\">Figma Design</a><br> <a href=\"https://deep-impact-ag.github.io/avax-landing/\">Current State Preview</a><br>",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DEEP-IMPACT-AG/avax-landing.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DEEP-IMPACT-AG/avax-landing/issues"
+  },
+  "homepage": "https://github.com/DEEP-IMPACT-AG/avax-landing#readme",
+  "devDependencies": {
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-sass": "^5.1.0",
+    "gulp-terser": "^2.1.0",
+    "sass": "^1.58.0"
+  }
+}
